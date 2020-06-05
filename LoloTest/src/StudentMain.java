@@ -112,7 +112,6 @@ public class StudentMain  {
 
 	  
 	 /*   public static void viewStud(ArrayList<StudentInformation> stud) {
-
 	        for (StudentInformation element : stud) {
 	            if (null != element) {
 	                System.out.println("1. Student ID: " + element.getNumID());
@@ -124,7 +123,6 @@ public class StudentMain  {
 	     	       
 	           }
 	        }
-
 	    }
 	    
 	    public static void search(ArrayList<StudentInformation> stud) {
@@ -146,12 +144,9 @@ public class StudentMain  {
 	        int numID;
 	        double avg;
 	        String userName;
-
 	        int addMore;
 	        int i = 0;
-
 	        do {
-
 	            System.out.println("1. Enter Student ID: ");
 	            numID = sc.nextInt();
 	            sc.nextLine();
@@ -181,25 +176,19 @@ public class StudentMain  {
     	  
     	  
     	  Scanner input = new Scanner(System.in);
-
     System.out.println("Please, enter numID to remove the Student: ");
     int id = input.nextInt();
-
     for (StudentInformation e : stud) {
         if (e.getNumID()==id) {
             stud.remove(e);
             System.out.println("Student removed");
             break;
         }
-
         else {
             System.out.println("Sorry, no such student with this " + id + " " + "number exist");
-
         }
-
     }
       FileHandler.write(stud);
-
       }       */
 
    

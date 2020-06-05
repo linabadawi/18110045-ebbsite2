@@ -16,14 +16,20 @@ import javax.swing.JTextField;
 
 
 public class GUIMain {
-	static ArrayList<StudentInformation> stud=new ArrayList<StudentInformation>();
-	public static void main(String[] args) {
+    static ArrayList<StudentInformation> stud=new ArrayList<StudentInformation>();
 	
-		 menu();
-		 FileHandler.read( stud);
+      public static void main(String[] args) {
+	 menu();
+	 FileHandler.read( stud);
 
-	}
+}
+		
+	
+	
+	
+	
 		public static void menu() {
+		
 		JFrame frmCal=new JFrame("Student System");
 		frmCal.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frmCal.setSize(600, 350);
@@ -59,7 +65,7 @@ public class GUIMain {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				addButton();
+				FrameAdd.addButton();
 				frmCal.add(btnAdd);
 				frmCal.add(btnView);
 				frmCal.add(btnSearch);
@@ -75,7 +81,7 @@ public class GUIMain {
  			@Override
  			public void actionPerformed(ActionEvent e) {
  				
- 				view();
+ 			FrameShow.view();
  				frmCal.setVisible(false);
  			}
  		});
@@ -84,7 +90,7 @@ public class GUIMain {
  			
  			@Override
  			public void actionPerformed(ActionEvent e) {
- 				FindStud();
+ 			FrameFind.FindStud();
  				frmCal.setVisible(false);
  				
  			}
@@ -100,7 +106,7 @@ public class GUIMain {
 		frmCal.setVisible(true);
 		}
 		   
-		public static void view() {
+	/*	public static void view() {
 			JFrame frmCal=new JFrame("Show all students");
 			frmCal.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 			frmCal.setSize(400, 600);
@@ -139,11 +145,11 @@ public class GUIMain {
 		   	frmCal.add(t);
 			frmCal.add(b);
 				frmCal.setVisible(true);
-		}
+		}*/
 		
 		
 		
-		public static void addButton() {
+		/*public static void addButton() {
 			JFrame frmCal=new JFrame("Add Student");
 			frmCal.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 			frmCal.setSize(1010, 200);
@@ -208,9 +214,9 @@ public class GUIMain {
 			
 			frmCal.setVisible(true);
 
-		}
+		}*/
 		
-	    		      public static void FindStud() {
+	    		  /*    public static void FindStud() {
 	    		    	
 	    		  			JFrame frmCal=new JFrame("Find Student");
 	    		  			frmCal.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -297,9 +303,7 @@ public class GUIMain {
   		  						
   		  					}
   		  				});
-	    		  		/*	btnback1.setPreferredSize(new Dimension(200, 40));
-	    		  			btnfind.setPreferredSize(new Dimension(200, 40));
-	    		  			btndelete.setPreferredSize(new Dimension(200, 40));*/
+	    		  		
 	    		  			
 	    		  			frmCal.add(lbl1);
 	    		  			frmCal.add(txt1);
@@ -317,6 +321,6 @@ public class GUIMain {
 
 	    		  		
 	    		  		
-	    		      }
+	    		      }*/
 	
 }
