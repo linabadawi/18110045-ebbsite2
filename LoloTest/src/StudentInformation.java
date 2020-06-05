@@ -1,7 +1,11 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import javax.swing.text.Element;
+
 public class StudentInformation {
+	
+	  ArrayList<StudentInformation> stud=new ArrayList<StudentInformation>();
 
 	private int numID;
 	private String userName;
@@ -20,22 +24,9 @@ public class StudentInformation {
 	   
 
 	}
-
-
 	public StudentInformation() {
 		// TODO Auto-generated constructor stub
 	}
-
-
-	
-
-
-	
-
-
-	 
-
-
 	public int getNumID() {
 	    return numID;
 	}
@@ -66,81 +57,92 @@ public class StudentInformation {
 
 	
 	
-	 public static void viewStud(ArrayList<StudentInformation> stud) {
+	 public static ArrayList<StudentInformation> viewStud(ArrayList<StudentInformation> stud ) {
 
-	        for (StudentInformation element : stud) {
-	            if (null != element) {
-	                System.out.println("1. Student ID: " + element.getNumID());
-	                System.out.println("2. Student Name: " + element.getUserName());
-	                System.out.println("3. Student Avg: " + element.getAvg() + "\n");
+	    //    for (StudentInformation element : stud) {
+	 //           if (null != element) {
+	          return stud;
+	              
+	             //   System.out.println("3. Student Avg: " + element.getAvg() + "\n");
 	                
 	               
 	                	      	       
 	     	       
-	           }
-	        }
+	          // }
+	     //   }
 
 	    }
 	    
-	    public static void search(ArrayList<StudentInformation> stud) {
+	    public static ArrayList<StudentInformation> search(ArrayList<StudentInformation> stud ) {
 	      
-	        	Scanner s=new Scanner(System.in);
-	    		System.out.println("Please enter student id: ");
-	    		int id=s.nextInt();
-	    		for (StudentInformation element : stud) {
+	    	
+	       //	Scanner s=new Scanner(System.in);
+	    		//System.out.println("Please enter student id: ");
+	    //		int id=s.nextInt();
+	    	/*	for (StudentInformation element : stud) {
 	    			if(element.getNumID()==id) {
-	    				System.out.println(element.getUserName());
-	    				System.out.println(element.getAvg());
+	    			element.getUserName();
+	    			element.getAvg();
+	    			element.getNumID();
+	    			//	System.out.println(element.getUserName());
+	    				//System.out.println(element.getAvg());
 	    				break;
 	    			}
-	    		}
+	    		}*/
+				return stud;
 	    }
 	    
-		public static void addStud(ArrayList<StudentInformation> stud) {
-	        Scanner sc = new Scanner(System.in);
-	        int numID;
-	        double avg;
-	        String userName;
-
-	        int addMore;
+	    
+		public static void addStud( ArrayList<StudentInformation>stud, int numID ,String userName, double avg, int addMore) {
+		
+			Scanner sc = new Scanner(System.in);
+	       
+			//int numID;
+			
+			//String userName ;
+			//double avg;
+	      //  int addMore;
 	        int i = 0;
 
 	        do {
 
-	            System.out.println("1. Enter Student ID: ");
-	            numID = sc.nextInt();
-	            sc.nextLine();
+	          //  System.out.println("1. Enter Student ID: ");
+	          //  numID = sc.nextInt();
+	         //   sc.nextLine();
 	    		
-	            System.out.println("2. Enter Student Name");
-	            userName = sc.nextLine();
-	            System.out.println("3. Enter Student avg");
-	            avg = sc.nextDouble();
+	         //   System.out.println("2. Enter Student Name");
+	          // userName = sc.nextLine();
+	           // System.out.println("3. Enter Student avg");
+	          // avg = sc.nextDouble();
 	            
-	            stud.add(new StudentInformation(numID, userName, avg));
+	            stud.add(new StudentInformation(numID ,userName, avg));
 	            ++i;
-	          
-	            
-	            
-	            System.out.println("To add another Student Record Press 1");
-	            addMore = sc.nextInt();
-	        } while (addMore == 1);	 
+	        //    System.out.println("To add another Student Record Press 1");
+	          //  addMore = sc.nextInt();
+	          } while (addMore == 1);
+	        	 
 	        
-	       
+	        
 	        FileHandler.write(stud);
 	       
 		}
-	    		
-	    		      
+	            
+	          
+	     
+		
+		
+		
+		 
 	    
-   public static void delete(ArrayList<StudentInformation> stud) {
+   public static ArrayList<StudentInformation> delete(ArrayList<StudentInformation> stud) {
  	  
  	  
- 	  Scanner input = new Scanner(System.in);
+ 	 // Scanner input = new Scanner(System.in);
 
- System.out.println("Please, enter numID to remove the Student: ");
- int id = input.nextInt();
+  //    System.out.println("Please, enter numID to remove the Student: ");
+     // int id = input.nextInt();
 
- for (StudentInformation e : stud) {
+   /*  for (StudentInformation e : stud) {
      if (e.getNumID()==id) {
          stud.remove(e);
          System.out.println("Student removed");
@@ -152,11 +154,43 @@ public class StudentInformation {
 
      }
 
- }
+ }*/
+	   
    FileHandler.write(stud);
+  return stud;
 
    }       
 
+
+	
+
+
+
+	
+
+	  
+	
+
+
+	 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
 
 
 

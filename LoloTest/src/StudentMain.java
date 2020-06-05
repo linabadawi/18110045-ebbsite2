@@ -1,6 +1,8 @@
 import java.io.FileNotFoundException;
+import java.io.ObjectInputStream.GetField;
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.Set;
 
 
 
@@ -9,15 +11,21 @@ public class StudentMain  {
 
 	 public static void main(String[] args) {
 		 
+		           /* Scanner scc = new Scanner(System.in);
 		 
-		 
-		          
+		         StudentInformation st =new StudentInformation();
+		         st.setNumID(scc.nextInt());
+		         st.setUserName(scc.nextLine());
+		         st.setAvg(scc.nextDouble());*/
+		         
+		         
 	       
-            ArrayList<StudentInformation> stud=new ArrayList<StudentInformation>();
-	       // StudentInformation[] stud = new StudentInformation[100];
-            
+           ArrayList<StudentInformation> stud=new ArrayList<StudentInformation>();
+	     
            
-           FileHandler.read(stud);
+         
+           
+           FileHandler.read( stud);
 
 	        Scanner sc = new Scanner(System.in);
 	        while (true) {
@@ -33,16 +41,65 @@ public class StudentMain  {
 
 	            switch (select) {
 	                case 1:
-	                  StudentInformation.addStud(stud);
-	                    break;
+	                	 System.out.println("1. Enter Student ID: ");                	
+	                	 int  numID = sc.nextInt();
+	                	  sc.nextLine();
+	                	  System.out.println("2. Enter Student Name");
+	                	 String userName = sc.nextLine();
+	                	
+	                	 System.out.println("3. Enter Student avg");
+	                	double avg = sc.nextDouble();
+	                	 System.out.println(" Press 0");
+	                	int addMore = sc.nextInt();
+	                	
+	                	StudentInformation.addStud( stud, numID,userName, avg , addMore);
+	                	
+	                	  break;
 	                case 2:
-	                	 StudentInformation. viewStud(stud);
-	                    break;
+	                	StudentInformation. viewStud(stud); //View MethodDDDDDD
+						for (StudentInformation element : stud) {
+				           if (null != element) {
+						 System.out.println("1. Student ID: " + element.getNumID());
+			               System.out.println("2. Student Name: " + element.getUserName());
+			                System.out.println("3. Student Avg: " + element.getAvg() + "\n");}}
+		                    break;
+					
+					
+					
 	                case 3:
-	                	 StudentInformation.	search(stud);
-	                    break;
+	                	Scanner s=new Scanner(System.in);
+	                	System.out.println("Please enter student id: ");
+	                	 int id=s.nextInt();
+	                	 
+	                  
+					StudentInformation.search(stud );  //Search MethoddDDddd
+	                   
+	               	 for (StudentInformation element : stud) {
+	     	    			if(element.getNumID()==id) {
+	     	    				System.out.println(element.getUserName());
+	     	    				System.out.println(element.getAvg());}}
+	     	    				break;
+	     	    			
+	     	    		
+	                	
+	                   
 	                case 4:
-	                	 StudentInformation.  delete(stud);
+	                	  Scanner input = new Scanner(System.in);
+	                	  System.out.println("Please, enter numID to remove the Student: ");
+	                      int id1 = input.nextInt();
+	                      for (StudentInformation e : stud) {
+	                    	     if (e.getNumID()==id1) {
+	                    	         stud.remove(e);
+	                    	         System.out.println("Student removed");
+	                    	         break;
+	                    	     }
+
+	                    	     else {
+	                    	      //   System.out.println("Sorry, no such student with this " + id1 + " " + "number exist");
+
+	                    	     }
+	                      }
+	                      StudentInformation.delete(stud);
 	                    break;
 	                case 0:
 	                    return;

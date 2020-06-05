@@ -81,15 +81,8 @@ public static void write( ArrayList<StudentInformation> stud) {
 	    			s.append(",");
 	    			s.append(element.getAvg());
 	    			s.append("\n");
-	    			
-				 
-	    					            	
-		        
 				 }
-			        }
-			    
-			 
-		         
+		        }
 			 p.write(s.toString());
 				p.close();
 				System.out.println("finished");
@@ -98,11 +91,18 @@ public static void write( ArrayList<StudentInformation> stud) {
 			}catch (Exception e) {
 				// TODO: handle exception
 			}
-	        
+	     
 		
 		
 		
-}
+	}
+		 
+	         
+		
+				 
+	    					            	
+		        
+				
 
     public static void read(ArrayList<StudentInformation> stud)  {
 	try {
