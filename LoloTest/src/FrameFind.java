@@ -1,6 +1,7 @@
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -8,7 +9,11 @@ import javax.swing.JLabel;
 import javax.swing.JTextField;
 
 public class FrameFind extends GUIMain{
+	
+
+	
 	  public static void FindStud() {
+		  //ArrayList<StudentInformation> stud=new ArrayList<StudentInformation>();
 	    	
 			JFrame frmCal=new JFrame("Find Student");
 			frmCal.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

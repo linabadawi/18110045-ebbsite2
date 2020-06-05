@@ -1,14 +1,17 @@
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JTextArea;
 
 public class FrameShow extends GUIMain{
+	
   
 	public static void view() {
+		//ArrayList<StudentInformation> stud=new ArrayList<StudentInformation>();
 		JFrame frmCal=new JFrame("Show all students");
 		frmCal.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frmCal.setSize(400, 600);

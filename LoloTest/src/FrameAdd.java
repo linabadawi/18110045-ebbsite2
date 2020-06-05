@@ -10,7 +10,9 @@ import javax.swing.JTextField;
 
 public class FrameAdd extends GUIMain{
 	
+	
 	public static void addButton() {
+		//ArrayList<StudentInformation> stud=new ArrayList<StudentInformation>();
 		JFrame frmCal=new JFrame("Add Student");
 		frmCal.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frmCal.setSize(1010, 200);

@@ -9,7 +9,7 @@ import java.util.Set;
 public class StudentMain  {
 	 
 
-	 public static void main(String[] args) {
+	// public static void main(String[] args) {
 		 
 		           /* Scanner scc = new Scanner(System.in);
 		 
@@ -19,7 +19,7 @@ public class StudentMain  {
 		         st.setAvg(scc.nextDouble());*/
 		         
 		         
-	       
+	       public static void list() {
            ArrayList<StudentInformation> stud=new ArrayList<StudentInformation>();
 	     
            
@@ -55,6 +55,8 @@ public class StudentMain  {
 	                	StudentInformation.addStud( stud, numID,userName, avg , addMore);
 	                	
 	                	  break;
+	                	
+	                	 
 	                case 2:
 	                	StudentInformation. viewStud(stud); //View MethodDDDDDD
 						for (StudentInformation element : stud) {
@@ -108,7 +110,7 @@ public class StudentMain  {
 	            }
 	        }
 
-	    }
+	   // }
 
 	  
 	 /*   public static void viewStud(ArrayList<StudentInformation> stud) {
@@ -196,7 +198,7 @@ public class StudentMain  {
       
 		  
 
-
+	       }
       
       
 	

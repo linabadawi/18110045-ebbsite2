@@ -5,7 +5,7 @@ import javax.swing.text.Element;
 
 public class StudentInformation {
 	
-	  ArrayList<StudentInformation> stud=new ArrayList<StudentInformation>();
+	ArrayList<StudentInformation> stud=new ArrayList<StudentInformation>();
 
 	private int numID;
 	private String userName;
